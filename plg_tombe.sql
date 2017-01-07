@@ -18,5 +18,5 @@ FOREIGN KEY ("pk_gr") REFERENCES "plg_gruppi" ("pk_gr"));
 SELECT AddGeometryColumn ('plg_tombe','geom',3004,'POLYGON','XY')
 
 -- creo indice
-CREATE INDEX idx_plg_anagrafiche
-ON plg_anagrafiche (pk_to)
+CREATE INDEX idx_plg_tombe
+ON plg_tombe (pk_gr)
