@@ -14,3 +14,7 @@ FOREIGN KEY ("pk_to") REFERENCES "plg_tombe" ("pk_to"));
 
 -- aggiungo colonna geometrica
 SELECT AddGeometryColumn ('plg_anagrafiche','geom',3004,'POLYGON','XY')
+
+-- creo indice
+CREATE INDEX idx_plg_anagrafiche
+ON plg_anagrafiche (pk_to)
